@@ -1,0 +1,18 @@
+{
+  "name": "nan_hello_sample",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/hello.js",
+    "build": "node-gyp configure && node-gyp build"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "nan": "~0.8.0"
+  },
+  "devDependencies": {
+    "node-gyp": "^0.13.0"
+  }
+}
