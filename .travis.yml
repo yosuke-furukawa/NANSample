@@ -1,5 +1,6 @@
 language: node_js
 node_js:
+  - v0.8
   - v0.10
   - v0.11
 before_script:
