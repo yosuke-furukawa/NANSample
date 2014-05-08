@@ -5,12 +5,14 @@ using namespace v8;
 
 NAN_METHOD(Method) {
   NanScope();
-  NanReturnValue(NanSymbol("world"));
+  v8::Handle<v8::Object> buffer = args[0]->ToObject();
+  bool hasIndexed = buffer->HasIndexedPropertiesInExternalArrayData();
+  NanReturnValue(hasIndexed);
 }
 
 void init(Handle<Object> exports) {
-  exports->Set(NanSymbol("hello"),
-      FunctionTemplate::New(Method)->GetFunction());
+  exports->Set(NanSymbol("hasIndexed"),
+      NanNew<FunctionTemplate>(Method)->GetFunction());
 }
 
 NODE_MODULE(addon, init)

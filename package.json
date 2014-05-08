@@ -10,7 +10,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "nan": "~0.8.0"
+    "nan": "^1.0.0"
   },
   "devDependencies": {
     "node-gyp": "^0.13.0"
