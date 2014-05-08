@@ -7,7 +7,7 @@ NAN_METHOD(Method) {
   NanScope();
   v8::Handle<v8::Object> buffer = args[0]->ToObject();
   bool hasIndexed = buffer->HasIndexedPropertiesInExternalArrayData();
-  NanReturnValue(hasIndexed);
+  NanReturnValue(NanNew<Boolean>(hasIndexed));
 }
 
 void init(Handle<Object> exports) {

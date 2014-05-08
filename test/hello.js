@@ -2,8 +2,8 @@ var hello = require("../hello");
 
 var assert = require("assert");
 
-var f64a = new Uint8Array(8);
-f64a[0] = 123;
-console.log(f64a);
-console.log(hello.hasIndexed(f64a));
-assert(hello.hasIndexed(f64a), true);
+var arr = new Uint8Array(8);
+console.log(arr);
+// f64a.buffer called, following log puts "true"
+// arr.buffer
+console.log(hello.hasIndexed(arr));
