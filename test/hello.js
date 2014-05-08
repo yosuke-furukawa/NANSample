@@ -4,6 +4,9 @@ var assert = require("assert");
 
 var arr = new Uint8Array(8);
 console.log(arr);
-// f64a.buffer called, following log puts "true"
-// arr.buffer
+// HasIndexedPropertiesInExternalArrayData is false
+console.log(hello.hasIndexed(arr));
+// if arr.buffer is called
+arr.buffer;
+// HasIndexedPropertiesInExternalArrayData is true
 console.log(hello.hasIndexed(arr));
